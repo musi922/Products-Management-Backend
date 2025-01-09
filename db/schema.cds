@@ -22,3 +22,13 @@ entity Products {
     dimUnit: String;    
     rating: Integer;
 }
+
+entity Cart{
+    key CartId: UUID;
+    product_ProductId: Association to Products;
+    quantity: Integer;
+    dateAdded: Timestamp;
+
+}
+
+
