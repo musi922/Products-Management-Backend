@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 const jsonData = {
-"ProductCollection": [
+	
+	"ProductCollection": [
 		{
 			"ProductId": "HT-1000",
 			"Category": "Laptops",
@@ -12,7 +13,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
 			"Name": "Notebook Basic 15",
-			"DateOfSale": "2017-03-26",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
 			"Status": "In Stock",
 			"Quantity": 10,
@@ -23,7 +24,7 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-1003",
@@ -35,7 +36,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Notebook Basic 19 with 2,80 GHz quad core, 19\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
 			"Name": "Notebook Basic 19",
-			"DateOfSale": "2017-04-09",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg",
 			"Status": "In Stock",
 			"Quantity": 15,
@@ -46,7 +47,7 @@ const jsonData = {
 			"Depth": 21,
 			"Height": 4,
 			"DimUnit": "cm",
-			"Rating":3
+			"Rating": 5
 		},
 		{
 			"ProductId": "HT-1007",
@@ -58,7 +59,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Digital Organizer with State-of-the-Art Storage Encryption",
 			"Name": "ITelO Vault",
-			"DateOfSale": "2017-05-17",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1007.jpg",
 			"Status": "Not in Stock",
 			"Quantity": 15,
@@ -69,7 +70,7 @@ const jsonData = {
 			"Depth": 22,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":2
+			"Rating": 2
 		},
 		{
 			"ProductId": "HT-1010",
@@ -81,7 +82,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Notebook Professional 15 with 2,80 GHz quad core, 15\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
 			"Name": "Notebook Professional 15",
-			"DateOfSale": "2017-02-22",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1010.jpg",
 			"Status": "Not in Stock",
 			"Quantity": 16,
@@ -92,7 +93,7 @@ const jsonData = {
 			"Depth": 20,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":5
+			"Rating": 1
 		},
 		{
 			"ProductId": "HT-1011",
@@ -104,7 +105,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Notebook Professional 17 with 2,80 GHz quad core, 17\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
 			"Name": "Notebook Professional 17",
-			"DateOfSale": "2017-01-02",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1011.jpg",
 			"Status": "In Stock",
 			"Quantity": 17,
@@ -115,7 +116,7 @@ const jsonData = {
 			"Depth": 23,
 			"Height": 2,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 3
 		},
 		{
 			"ProductId": "HT-1020",
@@ -127,7 +128,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Digital Organizer with State-of-the-Art Encryption for Storage and Network Communications",
 			"Name": "ITelO Vault Net",
-			"DateOfSale": "2017-05-08",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1020.jpg",
 			"Status": "Not in Stock",
 			"Quantity": 14,
@@ -138,7 +139,7 @@ const jsonData = {
 			"Depth": 1.8,
 			"Height": 17,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-1021",
@@ -150,7 +151,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "Digital Organizer with State-of-the-Art Encryption for Storage and Secure Stellite Link",
 			"Name": "ITelO Vault SAT",
-			"DateOfSale": "2017-06-30",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1021.jpg",
 			"Status": "In Stock",
 			"Quantity": 50,
@@ -161,7 +162,7 @@ const jsonData = {
 			"Depth": 1.7,
 			"Height": 18,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 5
 		},
 		{
 			"ProductId": "HT-1022",
@@ -173,7 +174,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "32 GB Digital Assistant with high-resolution color screen",
 			"Name": "Comfort Easy",
-			"DateOfSale": "2017-03-02",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1022.jpg",
 			"Status": "In Stock",
 			"Quantity": 30,
@@ -184,7 +185,7 @@ const jsonData = {
 			"Depth": 1.5,
 			"Height": 14,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 2
 		},
 		{
 			"ProductId": "HT-1023",
@@ -196,7 +197,7 @@ const jsonData = {
 			"WeightUnit": "KG",
 			"Description": "64 GB Digital Assistant with high-resolution color screen and synthesized voice output",
 			"Name": "Comfort Senior",
-			"DateOfSale": "2017-02-25",
+			
 			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1023.jpg",
 			"Status": "In Stock",
 			"Quantity": 24,
@@ -207,7 +208,7 @@ const jsonData = {
 			"Depth": 1.6,
 			"Height": 13,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			
@@ -230,10 +231,9 @@ const jsonData = {
 			"Depth": 12,
 			"Height": 36,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1031",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -253,10 +253,9 @@ const jsonData = {
 			"Depth": 19,
 			"Height": 43,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1032",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -276,10 +275,9 @@ const jsonData = {
 			"Depth": 19,
 			"Height": 43,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1035",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -299,10 +297,9 @@ const jsonData = {
 			"Depth": 20,
 			"Height": 41,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1036",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -322,10 +319,9 @@ const jsonData = {
 			"Depth": 26,
 			"Height": 46,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1037",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -345,10 +341,9 @@ const jsonData = {
 			"Depth": 22.1,
 			"Height": 39.1,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1040",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -368,10 +363,9 @@ const jsonData = {
 			"Depth": 46,
 			"Height": 30,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1041",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -391,10 +385,9 @@ const jsonData = {
 			"Depth": 42,
 			"Height": 26,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1042",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -414,10 +407,9 @@ const jsonData = {
 			"Depth": 50,
 			"Height": 65,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1050",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -437,10 +429,9 @@ const jsonData = {
 			"Depth": 41,
 			"Height": 28,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1051",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -460,10 +451,9 @@ const jsonData = {
 			"Depth": 32,
 			"Height": 25,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1052",
 			"Category": "Printers",
 			"MainCategory": "Printers & Scanners",
@@ -483,10 +473,9 @@ const jsonData = {
 			"Depth": 41,
 			"Height": 28,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1055",
 			"Category": "Multifunction Printers",
 			"MainCategory": "Printers & Scanners",
@@ -506,10 +495,9 @@ const jsonData = {
 			"Depth": 45,
 			"Height": 29,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1056",
 			"Category": "Multifunction Printers",
 			"MainCategory": "Printers & Scanners",
@@ -529,10 +517,9 @@ const jsonData = {
 			"Depth": 41.3,
 			"Height": 22,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
-			
 			"ProductId": "HT-1060",
 			"Category": "Mice",
 			"MainCategory": "Computer Components",
@@ -552,10 +539,8 @@ const jsonData = {
 			"Depth": 14.5,
 			"Height": 3.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1061",
 			"Category": "Mice",
 			"MainCategory": "Computer Components",
@@ -575,10 +560,8 @@ const jsonData = {
 			"Depth": 15,
 			"Height": 3.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1062",
 			"Category": "Mice",
 			"MainCategory": "Computer Components",
@@ -598,10 +581,8 @@ const jsonData = {
 			"Depth": 7,
 			"Height": 4,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1063",
 			"Category": "Keyboards",
 			"MainCategory": "Computer Components",
@@ -621,10 +602,8 @@ const jsonData = {
 			"Depth": 21,
 			"Height": 3.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1064",
 			"Category": "Keyboards",
 			"MainCategory": "Computer Components",
@@ -644,10 +623,8 @@ const jsonData = {
 			"Depth": 25,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1065",
 			"Category": "Keyboards",
 			"MainCategory": "Computer Components",
@@ -667,10 +644,8 @@ const jsonData = {
 			"Depth": 23,
 			"Height": 4,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1066",
 			"Category": "Mousepads",
 			"MainCategory": "Computer Components",
@@ -690,10 +665,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 0.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1067",
 			"Category": "Mousepads",
 			"MainCategory": "Computer Components",
@@ -713,10 +686,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 0.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1068",
 			"Category": "Mousepads",
 			"MainCategory": "Computer Components",
@@ -736,10 +707,8 @@ const jsonData = {
 			"Depth": 24,
 			"Height": 0.6,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1069",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -759,10 +728,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1070",
 			"Category": "Graphic Cards",
 			"MainCategory": "Computer Components",
@@ -782,10 +749,8 @@ const jsonData = {
 			"Depth": 35,
 			"Height": 17,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1071",
 			"Category": "Graphic Cards",
 			"MainCategory": "Computer Components",
@@ -805,10 +770,8 @@ const jsonData = {
 			"Depth": 35,
 			"Height": 17,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1072",
 			"Category": "Graphic Cards",
 			"MainCategory": "Computer Components",
@@ -828,10 +791,8 @@ const jsonData = {
 			"Depth": 35,
 			"Height": 17,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1073",
 			"Category": "Graphic Cards",
 			"MainCategory": "Computer Components",
@@ -851,10 +812,8 @@ const jsonData = {
 			"Depth": 35,
 			"Height": 17,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1080",
 			"Category": "Scanners",
 			"MainCategory": "Printers & Scanners",
@@ -874,10 +833,8 @@ const jsonData = {
 			"Depth": 48,
 			"Height": 5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1081",
 			"Category": "Scanners",
 			"MainCategory": "Printers & Scanners",
@@ -897,10 +854,8 @@ const jsonData = {
 			"Depth": 43,
 			"Height": 7,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1082",
 			"Category": "Scanners",
 			"MainCategory": "Printers & Scanners",
@@ -920,10 +875,8 @@ const jsonData = {
 			"Depth": 41,
 			"Height": 12,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1083",
 			"Category": "Scanners",
 			"MainCategory": "Printers & Scanners",
@@ -943,10 +896,8 @@ const jsonData = {
 			"Depth": 40,
 			"Height": 10,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1085",
 			"Category": "Multifunction Printers",
 			"MainCategory": "Printers & Scanners",
@@ -966,10 +917,8 @@ const jsonData = {
 			"Depth": 42,
 			"Height": 22,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1090",
 			"Category": "Speakers",
 			"MainCategory": "Computer Components",
@@ -989,10 +938,8 @@ const jsonData = {
 			"Depth": 10,
 			"Height": 16,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1091",
 			"Category": "Speakers",
 			"MainCategory": "Computer Components",
@@ -1012,10 +959,8 @@ const jsonData = {
 			"Depth": 11,
 			"Height": 17.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1092",
 			"Category": "Speakers",
 			"MainCategory": "Computer Components",
@@ -1035,10 +980,8 @@ const jsonData = {
 			"Depth": 10.4,
 			"Height": 18.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1100",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1058,10 +1001,8 @@ const jsonData = {
 			"Depth": 6.5,
 			"Height": 2.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1101",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1081,10 +1022,8 @@ const jsonData = {
 			"Depth": 6.7,
 			"Height": 24,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1102",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1104,10 +1043,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 27,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1103",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1127,10 +1064,8 @@ const jsonData = {
 			"Depth": 3.4,
 			"Height": 22,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1104",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1150,10 +1085,8 @@ const jsonData = {
 			"Depth": 3,
 			"Height": 30,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1105",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1173,10 +1106,8 @@ const jsonData = {
 			"Depth": 4,
 			"Height": 21,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1106",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1196,10 +1127,8 @@ const jsonData = {
 			"Depth": 4.2,
 			"Height": 23.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1107",
 			"Category": "Software",
 			"MainCategory": "Software",
@@ -1219,10 +1148,8 @@ const jsonData = {
 			"Depth": 1.5,
 			"Height": 19,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1110",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -1242,10 +1169,8 @@ const jsonData = {
 			"Depth": 8,
 			"Height": 4.3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1111",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -1265,10 +1190,8 @@ const jsonData = {
 			"Depth": 9,
 			"Height": 7,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1112",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -1288,10 +1211,8 @@ const jsonData = {
 			"Depth": 8.2,
 			"Height": 1.3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1113",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -1311,7 +1232,7 @@ const jsonData = {
 			"Depth": 2,
 			"Height": 0.1,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-1114",
@@ -1333,10 +1254,8 @@ const jsonData = {
 			"Depth": 32,
 			"Height": 7,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1115",
 			"Category": "Telecommunications",
 			"MainCategory": "Computer Components",
@@ -1356,10 +1275,8 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1116",
 			"Category": "Telecommunications",
 			"MainCategory": "Computer Components",
@@ -1379,10 +1296,8 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1117",
 			"Category": "Telecommunications",
 			"MainCategory": "Computer Components",
@@ -1402,10 +1317,8 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1118",
 			"Category": "Computer System Accessories",
 			"MainCategory": "Computer Systems",
@@ -1425,10 +1338,8 @@ const jsonData = {
 			"Depth": 8.7,
 			"Height": 1.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1120",
 			"Category": "Keyboards",
 			"MainCategory": "Computer Components",
@@ -1448,10 +1359,8 @@ const jsonData = {
 			"Depth": 23,
 			"Height": 4,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1137",
 			"Category": "Flat Screen Monitors",
 			"MainCategory": "Computer Components",
@@ -1471,10 +1380,8 @@ const jsonData = {
 			"Depth": 22,
 			"Height": 38,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1138",
 			"Category": "Mice",
 			"MainCategory": "Computer Components",
@@ -1494,10 +1401,8 @@ const jsonData = {
 			"Depth": 0.5,
 			"Height": 1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1210",
 			"Category": "PCs",
 			"MainCategory": "Computer Systems",
@@ -1517,10 +1422,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 43,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1500",
 			"Category": "Servers",
 			"MainCategory": "Computer Systems",
@@ -1540,10 +1443,8 @@ const jsonData = {
 			"Depth": 35,
 			"Height": 23,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1501",
 			"Category": "Servers",
 			"MainCategory": "Computer Systems",
@@ -1563,10 +1464,8 @@ const jsonData = {
 			"Depth": 30,
 			"Height": 27,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1502",
 			"Category": "Servers",
 			"MainCategory": "Computer Systems",
@@ -1586,10 +1485,8 @@ const jsonData = {
 			"Depth": 27.3,
 			"Height": 37,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6130",
 			"Category": "Flat Screen TVs",
 			"MainCategory": "TV, Video & HiFi",
@@ -1609,10 +1506,8 @@ const jsonData = {
 			"Depth": 22.1,
 			"Height": 55,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6131",
 			"Category": "Flat Screen TVs",
 			"MainCategory": "TV, Video & HiFi",
@@ -1632,10 +1527,8 @@ const jsonData = {
 			"Depth": 26,
 			"Height": 61,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6132",
 			"Category": "Flat Screen TVs",
 			"MainCategory": "TV, Video & HiFi",
@@ -1655,10 +1548,8 @@ const jsonData = {
 			"Depth": 23,
 			"Height": 79.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-7030",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1678,10 +1569,8 @@ const jsonData = {
 			"Depth": 13,
 			"Height": 12.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-7020",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1701,10 +1590,8 @@ const jsonData = {
 			"Depth": 13,
 			"Height": 12.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-7010",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1724,10 +1611,8 @@ const jsonData = {
 			"Depth": 13,
 			"Height": 12.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-7000",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1747,10 +1632,8 @@ const jsonData = {
 			"Depth": 13,
 			"Height": 12.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1095",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1770,10 +1653,8 @@ const jsonData = {
 			"Depth": 19,
 			"Height": 23,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1096",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1793,10 +1674,8 @@ const jsonData = {
 			"Depth": 17,
 			"Height": 19,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1097",
 			"Category": "Accessories",
 			"MainCategory": "Computer Components",
@@ -1816,7 +1695,7 @@ const jsonData = {
 			"Depth": 2.4,
 			"Height": 19.7,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-6123",
@@ -1838,10 +1717,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 0.8,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6122",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1861,7 +1738,7 @@ const jsonData = {
 			"Depth": 8,
 			"Height": 9.2,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-6121",
@@ -1883,10 +1760,8 @@ const jsonData = {
 			"Depth": 8,
 			"Height": 9.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6120",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1906,10 +1781,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6111",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1929,10 +1802,8 @@ const jsonData = {
 			"Depth": 26,
 			"Height": 6.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6110",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1952,10 +1823,8 @@ const jsonData = {
 			"Depth": 24,
 			"Height": 6,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6102",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1975,10 +1844,8 @@ const jsonData = {
 			"Depth": 23.1,
 			"Height": 23,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-6101",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -1998,10 +1865,8 @@ const jsonData = {
 			"Depth": 23.1,
 			"Height": 23,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-2002",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -2021,7 +1886,7 @@ const jsonData = {
 			"Depth": 16.5,
 			"Height": 14,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-6100",
@@ -2043,10 +1908,8 @@ const jsonData = {
 			"Depth": 23.1,
 			"Height": 23,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-2027",
 			"Category": "Accessories",
 			"MainCategory": "Computer Systems",
@@ -2066,10 +1929,8 @@ const jsonData = {
 			"Depth": 2,
 			"Height": 2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-2026",
 			"Category": "Accessories",
 			"MainCategory": "Computer Systems",
@@ -2089,7 +1950,7 @@ const jsonData = {
 			"Depth": 10.2,
 			"Height": 13,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-2025",
@@ -2111,10 +1972,8 @@ const jsonData = {
 			"Depth": 13,
 			"Height": 20,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-2001",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -2134,10 +1993,8 @@ const jsonData = {
 			"Depth": 19.5,
 			"Height": 29,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-2000",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -2157,10 +2014,8 @@ const jsonData = {
 			"Depth": 19,
 			"Height": 27.6,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1603",
 			"Category": "Desktop Computers",
 			"MainCategory": "Computer Systems",
@@ -2180,10 +2035,8 @@ const jsonData = {
 			"Depth": 28,
 			"Height": 42,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1602",
 			"Category": "Desktop Computers",
 			"MainCategory": "Computer Systems",
@@ -2203,10 +2056,8 @@ const jsonData = {
 			"Depth": 34,
 			"Height": 47,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1601",
 			"Category": "Desktop Computers",
 			"MainCategory": "Computer Systems",
@@ -2226,10 +2077,8 @@ const jsonData = {
 			"Depth": 31.7,
 			"Height": 40.2,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1600",
 			"Category": "Desktop Computers",
 			"MainCategory": "Computer Systems",
@@ -2249,10 +2098,8 @@ const jsonData = {
 			"Depth": 29,
 			"Height": 38,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1119",
 			"Category": "Accessories",
 			"MainCategory": "Computer Systems",
@@ -2272,10 +2119,8 @@ const jsonData = {
 			"Depth": 3.1,
 			"Height": 3.9,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-8000",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2295,10 +2140,8 @@ const jsonData = {
 			"Depth": 19,
 			"Height": 3.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-8001",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2318,10 +2161,8 @@ const jsonData = {
 			"Depth": 20,
 			"Height": 3.4,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-8002",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2341,10 +2182,8 @@ const jsonData = {
 			"Depth": 21,
 			"Height": 4.1,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-8003",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2364,10 +2203,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "PF-1000",
 			"Category": "Accessories",
 			"MainCategory": "Computer Systems",
@@ -2387,10 +2224,8 @@ const jsonData = {
 			"Depth": 30,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9999",
 			"Category": "Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2410,10 +2245,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9998",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2433,10 +2266,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9997",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2456,10 +2287,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9996",
 			"Category": "Accessories",
 			"MainCategory": "Smartphones & Tablets",
@@ -2479,10 +2308,8 @@ const jsonData = {
 			"Depth": 40,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9995",
 			"Category": "Accessories",
 			"MainCategory": "Smartphones & Tablets",
@@ -2502,10 +2329,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9994",
 			"Category": "Accessories",
 			"MainCategory": "TV, Video & HiFi",
@@ -2525,7 +2350,7 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 27,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		},
 		{
 			"ProductId": "HT-9993",
@@ -2547,10 +2372,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9992",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2570,10 +2393,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-9991",
 			"Category": "Accessories",
 			"MainCategory": "Smartphones & Tablets",
@@ -2593,10 +2414,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1251",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2616,10 +2435,8 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1252",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2639,10 +2456,8 @@ const jsonData = {
 			"Depth": 6,
 			"Height": 1.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1253",
 			"Category": "Laptops",
 			"MainCategory": "Computer Systems",
@@ -2662,10 +2477,8 @@ const jsonData = {
 			"Depth": 18,
 			"Height": 3,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1254",
 			"Category": "Flat Screens",
 			"MainCategory": "Computer Components",
@@ -2685,10 +2498,8 @@ const jsonData = {
 			"Depth": 12,
 			"Height": 36,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1255",
 			"Category": "Flat Screens",
 			"MainCategory": "Computer Components",
@@ -2708,10 +2519,8 @@ const jsonData = {
 			"Depth": 12,
 			"Height": 38,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1256",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2731,10 +2540,8 @@ const jsonData = {
 			"Depth": 15,
 			"Height": 1.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1257",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2754,10 +2561,8 @@ const jsonData = {
 			"Depth": 31,
 			"Height": 4.5,
 			"DimUnit": "cm",
-			"Rating":4
-		},
-		{
-			
+			"Rating": 4
+		},{
 			"ProductId": "HT-1258",
 			"Category": "Smartphones and Tablets",
 			"MainCategory": "Smartphones & Tablets",
@@ -2777,7 +2582,7 @@ const jsonData = {
 			"Depth": 21,
 			"Height": 3.5,
 			"DimUnit": "cm",
-			"Rating":4
+			"Rating": 4
 		}
 	]
 };

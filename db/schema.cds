@@ -10,7 +10,6 @@ entity Products {
     weightUnit: String;
     description: String;
     name: String;
-    dateOfSale: Date;
     productPicUrl: String;
     status: String;
     quantity: Integer;
