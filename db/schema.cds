@@ -24,12 +24,11 @@ entity Products {
     isInCart: Boolean default false;
 }
 
-entity Cart{
+entity Cart {
     key CartId: UUID;
     product_ProductId: Association to Products;
     quantity: Integer;
     dateAdded: Timestamp;
-
 }
 
 

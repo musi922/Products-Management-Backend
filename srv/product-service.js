@@ -40,14 +40,15 @@ module.exports = cds.service.impl(async function () {
                 return req.error(404, "Cart item not found");
             }
             
-            const productId = cartItem[0].product_ProductId;
+            const productId = cartItem[0].product_ProductId_ProductId
             console.log("Product ID to update:", productId); 
             
             await tx.update(Products)
-                .set({ isInCart: false })
-                .where({ ProductId: productId });
+        .set({ isInCart: false })
+        .where({ ProductId: productId });
+
                 
-            console.log("Updated product isInCart flag"); 
+            console.log("Updated product isInCart flag", productId); 
             
         } catch (error) {
             console.error("Delete error:", error);
