@@ -34,21 +34,20 @@ module.exports = cds.service.impl(async function () {
         
         try {
             const cartItem = await tx.read(Cart).where({ CartId });
-            console.log("Found cart item:", cartItem); // Add this log
+            console.log("Found cart item:", cartItem); 
             
             if (!cartItem.length) {
                 return req.error(404, "Cart item not found");
             }
             
-            // Get the ProductId directly from the association
             const productId = cartItem[0].product_ProductId;
-            console.log("Product ID to update:", productId); // Add this log
+            console.log("Product ID to update:", productId); 
             
             await tx.update(Products)
                 .set({ isInCart: false })
                 .where({ ProductId: productId });
                 
-            console.log("Updated product isInCart flag"); // Add this log
+            console.log("Updated product isInCart flag"); 
             
         } catch (error) {
             console.error("Delete error:", error);
