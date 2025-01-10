@@ -11,10 +11,22 @@
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.8.0",
-    "@cap-js/sqlite": "^1"
+    "@cap-js/sqlite": "^1",
+    "sqlite3": "^5.1.7"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch": "cds deploy --to sqlite:memory && cds watch"
+    "watch": "cds watch",
+    "deploy": "cds deploy"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "sqlite.db"
+        }
+      }
+    }
   }
 }

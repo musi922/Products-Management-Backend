@@ -21,6 +21,7 @@ entity Products {
     height: Decimal;
     dimUnit: String;    
     rating: Integer;
+    isInCart: Boolean default false;
 }
 
 entity Cart{

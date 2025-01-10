@@ -6,10 +6,14 @@ module.exports = cds.service.impl(async function () {
         const { ProductId } = req.data;
         const tx = cds.transaction(req);
 
-        const product = await tx.read(Products).where({ ProductId });
+        const product = await tx.read(Products).where({ ProductId , isInCart: false});
         if (!product.length) {
             return req.error('Product not found');
         }
+        
+        await tx.update(Products)
+        .set({ isInCart: true })
+        .where({ ProductId: ProductId });
 
         const cartItem = {
             CartId: cds.utils.uuid(),
