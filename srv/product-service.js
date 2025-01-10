@@ -28,12 +28,32 @@ module.exports = cds.service.impl(async function () {
 
         
     });
-
-    this.before('DELETE', 'Cart', async req => {
-        if (!req.data.CartId) {
-            return req.error(400, "CartId is required");
+    this.before('DELETE', 'Cart', async (req) => {
+        const tx = cds.transaction(req);
+        const { CartId } = req.data;
+        
+        try {
+            const cartItem = await tx.read(Cart).where({ CartId });
+            console.log("Found cart item:", cartItem); // Add this log
+            
+            if (!cartItem.length) {
+                return req.error(404, "Cart item not found");
+            }
+            
+            // Get the ProductId directly from the association
+            const productId = cartItem[0].product_ProductId;
+            console.log("Product ID to update:", productId); // Add this log
+            
+            await tx.update(Products)
+                .set({ isInCart: false })
+                .where({ ProductId: productId });
+                
+            console.log("Updated product isInCart flag"); // Add this log
+            
+        } catch (error) {
+            console.error("Delete error:", error);
+            return req.error(500, "Failed to process delete request");
         }
-        return {success: true};
     });
     
 
