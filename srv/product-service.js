@@ -87,25 +87,33 @@ module.exports = cds.service.impl(async function () {
     });
 
     this.on('addToCart', async req => {
-        if (req.user.role !== 'user') return req.error(403, 'User access required');
-
         const { ProductId } = req.data;
-        try {
-            const product = await SELECT.from(Products).where({ ProductId, isInCart: false });
-            if (!product.length) return req.error(404, 'Product not found or already in cart');
+        const tx = cds.transaction(req);
 
-            await UPDATE(Products).set({ isInCart: true }).where({ ProductId });
-            
-            return await INSERT.into(Cart).entries({
-                CartId: cds.utils.uuid(),
-                product_ProductId: ProductId,
-                quantity: 1,
-                dateAdded: new Date()
-            });
-        } catch (error) {
-            return req.error(500, 'Failed to add to cart');
+        const product = await tx.read(Products).where({ ProductId , isInCart: false});
+        if (!product.length) {
+            return req.error('Product not found');
         }
+
+        await tx.update(Products)
+        .set({ isInCart: true })
+        .where({ ProductId: ProductId });
+
+        const cartItem = {
+            CartId: cds.utils.uuid(),
+            product_ProductId: {ProductId},
+            quantity: 1,
+            dateAdded: new Date(),
+        };
+        console.log("Cart Item Added:", cartItem);
+
+    await tx.create(Cart).entries(cartItem);
+    return { success: true };
+
+
     });
+    
+    
 
     this.on('getCartItems', async req => {
         if (req.user.role !== 'user') {
