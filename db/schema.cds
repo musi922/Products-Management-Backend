@@ -31,4 +31,12 @@ entity Cart {
     dateAdded: Timestamp;
 }
 
+entity Users {
+    key ID : UUID;
+    username : String;
+    password : String; 
+    role : String; 
+}
+
+
 
