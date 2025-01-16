@@ -5,7 +5,6 @@ const SECRET_KEY = process.env.SECRET_KEY || 'default-secret-key-for-development
 module.exports = cds.service.impl(async function () {
     const { Products, Cart, Users } = this.entities;
 
-    // Initialize admin user
     try {
         const adminExists = await SELECT.from(Users).where({ username: 'admin' });
         
@@ -23,7 +22,6 @@ module.exports = cds.service.impl(async function () {
         console.error('Error initializing admin:', error);
     }
 
-    // Login endpoint
     this.on('login', async req => {
         const { username, password } = req.data;
         
@@ -46,7 +44,6 @@ module.exports = cds.service.impl(async function () {
         }
     });
 
-    // Authentication middleware
     this.before('*', async req => {
         if (req.event === 'login') return;
 
@@ -61,7 +58,6 @@ module.exports = cds.service.impl(async function () {
         }
     });
 
-    // Access control
     this.before(['CREATE', 'UPDATE', 'DELETE'], 'Products', req => {
         if (req.user.role !== 'admin') return req.error(403, 'Admin access required');
     });
@@ -70,7 +66,6 @@ module.exports = cds.service.impl(async function () {
         if (req.user.role !== 'user') return req.error(403, 'User access required');
     });
 
-    // Product management
     this.on('manageProducts', async req => {
         if (req.user.role !== 'admin') return req.error(403, 'Admin access required');
 
@@ -91,7 +86,6 @@ module.exports = cds.service.impl(async function () {
         }
     });
 
-    // Cart operations
     this.on('addToCart', async req => {
         if (req.user.role !== 'user') return req.error(403, 'User access required');
 
@@ -123,7 +117,6 @@ module.exports = cds.service.impl(async function () {
         });
     });
 
-    // Create user
     this.on('createUser', async req => {
         if (req.user.role !== 'admin') return req.error(403, 'Admin access required');
 
