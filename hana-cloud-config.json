@@ -1,0 +1,10 @@
+{
+    "data": {
+        "edition": "cloud",
+        "memory": 16,
+        "serviceStopped": false,
+        "systempassword": "YourSecurePassword123",
+        "encrypted": true,
+        "useSystemDB": true
+    }
+}

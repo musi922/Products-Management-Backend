@@ -7,30 +7,53 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^8.6.1",
-    "@sap/cds-sqlite": "^1.24.1",
+    "@sap/hana-client": "^2.19.21",
+    "@sap/xssec": "^3.3.4",
+    "@sap/cds-hana": "^2",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "express": "^4",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0"
   },
   "devDependencies": {
-    "@cap-js/cds-types": "^0.8.0",
     "@cap-js/sqlite": "^1",
     "sqlite3": "^5.1.7"
   },
   "scripts": {
-    "start": "cds-serve",
-    "watch": "cds watch",
-    "deploy": "cds deploy"
-  },
+  "start": "cds-serve",
+  "build": "cds build",
+  "deploy": "cf push",
+  "build:cf": "cds build --production"
+}
+,
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
-        "credentials": {
-          "database": "sqlite.db"
+        "[production]": {
+          "kind": "hana"
+        },
+        "[development]": {
+          "kind": "sqlite",
+          "credentials": {
+            "database": "sqlite.db"
+          }
+        }
+      },
+      "auth": {
+        "[production]": {
+          "kind": "xsuaa"
+        },
+        "[development]": {
+          "kind": "jwt"
         }
       }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
     }
+  },
+  "engines": {
+    "node": "^18"
   }
 }
