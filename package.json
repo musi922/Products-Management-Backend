@@ -31,7 +31,11 @@
     "requires": {
       "db": {
         "[production]": {
-          "kind": "hana"
+          "kind": "hana",
+          "model": ["db", "srv"],
+          "credentials": {
+            "tenant": "productsmanagercap"
+          }
         },
         "[development]": {
           "kind": "sqlite",
@@ -52,7 +56,7 @@
     "hana": {
       "deploy-format": "hdbtable"
     }
-  },
+},
   "engines": {
     "node": "^18"
   }

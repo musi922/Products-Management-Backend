@@ -1,13 +1,22 @@
 ---
 applications:
-- name: products-manager-cap
+- name: productsmanagercap
   path: gen/srv
   memory: 256M
   buildpack: nodejs_buildpack
   services:
-    - products-manager-db
-    - products-manager-auth
+    - productsmanagercap-db
+    - productsmanagercap-auth
   env:
     NODE_ENV: production
-    XS_APP_LOG_LEVEL: info
-    XS_LOG_CONNECTION_DATA: true
+    
+- name: productsmanagercap-db-deployer
+  path: gen/db
+  memory: 256M
+  no-route: true
+  health-check-type: process
+  buildpack: nodejs_buildpack
+  services:
+    - productsmanagercap-db
+  env:
+    NODE_ENV: production

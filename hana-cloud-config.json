@@ -1,10 +1,14 @@
 {
-    "data": {
-        "edition": "cloud",
-        "memory": 16,
-        "serviceStopped": false,
-        "systempassword": "YourSecurePassword123",
-        "encrypted": true,
-        "useSystemDB": true
+    "target": "cloud",
+    "binding": {
+      "type": "cf",
+      "apiEndpoint": "https://api.cf.us10.hana.ondemand.com",
+      "org": "c05c1118trial_c05c1118trial_ext",
+      "space": "Development"
+    },
+    "instance": {
+      "name": "productsmanagercap-db",
+      "serviceOfferingName": "hana",
+      "servicePlanName": "hdi-shared"
     }
-}
+  }
